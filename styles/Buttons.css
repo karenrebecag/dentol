@@ -92,6 +92,8 @@
 @media (max-width: 767px) {
   .NormalButton,
   .WhatsAppButton {
-    text-align: center;
-    height:70px!important;  }
+    text-align: start;
+    height:50px!important;  
+    font-weight: var(--bold);
+    }
   }
