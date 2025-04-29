@@ -2,16 +2,25 @@
 .MainBannerServices {
   background-image: url('/assets/BannerServicios.png');
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-position: center;
   padding: 60px;
   min-height: 758px;
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
   justify-content: flex-start;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
 }
 
 /* Sticky Navbar */
 .StickyBar {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   padding-top: 20px;
@@ -22,42 +31,69 @@
 /* Services Selector */
 .ServiciosSelectorWrapper,
 .ServiciosSelector {
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
   flex-direction: row;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   gap: 20px;
 }
 .ServiciosSelector {
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  -moz-transition: -moz-transform 0.8s ease-in-out;
   transition: transform 0.8s ease-in-out;
+  -webkit-transform: translateZ(0);
   will-change: transform;
 }
 
 /* Navigation Dots */
 .ServiciosNavDots {
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
   flex-direction: row;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
   gap: 20px;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
   padding: 20px 0;
 }
 
 /* Pills */
 .Pill {
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
   padding: 10px 20px;
   min-width: 250px;
   gap: 10px;
   background: white;
   border-radius: 55px;
+  -webkit-border-radius: 55px;
+  -moz-border-radius: 55px;
   text-align: start;
+  -webkit-animation: slideIn 0.5s ease;
+  -moz-animation: slideIn 0.5s ease;
   animation: slideIn 0.5s ease;
 }
 .Pill1,
 .Pill2,
 .Pill3,
 .Pill4 {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -84,21 +120,32 @@
 
 /* Nav Arrows */
 .NavArrow {
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
   align-items: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border: 1px solid #182031;
   background-color: white;
   font-size: 30px;
+  -webkit-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
-
-.NavArrow img{
+.NavArrow img {
   width: 20px;
   height: 20px;
+  -webkit-transition: filter 0.3s ease-in-out;
+  -moz-transition: filter 0.3s ease-in-out;
   transition: filter 0.3s ease-in-out;
 }
 
@@ -116,15 +163,20 @@
   cursor: not-allowed;
 }
 
+/* Pill Variants */
 .Pill1 {
   border: 1px solid #859a50;
 }
 .Pill1:hover {
   background: rgba(133, 154, 80, 0.7);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
   transform: scale(1.05);
 }
 .Pill1.active {
   background: var(--verde);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
   transform: scale(1.05);
   border: none;
 }
@@ -134,10 +186,14 @@
 }
 .Pill2:hover {
   background: rgba(151, 144, 104, 0.7);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
   transform: scale(1.04);
 }
 .Pill2.active {
   background: #e1dab1;
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
   transform: scale(1.04);
   border: none;
 }
@@ -147,10 +203,14 @@
 }
 .Pill3:hover {
   background: rgba(174, 125, 69, 0.7);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
   transform: scale(1.04);
 }
 .Pill3.active {
   background: #efcfa9;
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
   transform: scale(1.04);
   border: none;
 }
@@ -160,15 +220,43 @@
 }
 .Pill4:hover {
   background: rgba(106, 42, 40, 0.7);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
   transform: scale(1.04);
 }
 .Pill4.active {
   background: #c96f6c;
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
   transform: scale(1.04);
   border: none;
 }
 
 /* Slide-in Animation */
+@-webkit-keyframes slideIn {
+  from {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-moz-keyframes slideIn {
+  from {
+    -moz-transform: translateY(30px);
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes slideIn {
   from {
     transform: translateY(30px);
@@ -188,6 +276,8 @@
   background: #cfd8dc;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
   transition: background 0.3s ease;
 }
 .dot-active {
@@ -197,10 +287,18 @@
 /* Nivel Content Section */
 .NivelContent {
   padding: 0 60px;
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
   flex-direction: row;
   gap: 30px;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
   justify-content: center;
+  -webkit-animation: slideIn 0.5s ease;
+  -moz-animation: slideIn 0.5s ease;
   animation: slideIn 0.5s ease;
 }
 
@@ -212,6 +310,8 @@
   max-width: 712px;
   margin-bottom: 100px;
   opacity: 0;
+  -webkit-transform: translateY(60px);
+  -moz-transform: translateY(60px);
   transform: translateY(60px);
 }
 
@@ -223,16 +323,24 @@
 }
 .imgServices_borderRight {
   border-radius: 50px 0 190px 50px;
+  -webkit-border-radius: 50px 0 190px 50px;
+  -moz-border-radius: 50px 0 190px 50px;
 }
 .imgServices_borderLeft {
   border-radius: 50px 0 50px 190px;
+  -webkit-border-radius: 50px 0 50px 190px;
+  -moz-border-radius: 50px 0 50px 190px;
 }
 
 /* Scroll Indicator */
 .ScrollIndicator {
   position: relative;
   width: 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   flex-direction: column;
   align-items: center;
   margin: 50px 0;
@@ -244,12 +352,20 @@
   height: 0;
   background-color: #859a50;
   border-radius: 2px;
+  -webkit-transition: height 0.01s ease-in-out;
+  -moz-transition: height 0.01s ease-in-out;
   transition: height 0.01s ease-in-out;
   z-index: 1;
 }
 .ScrollBullets {
+  display: -webkit-flex;
+  display: -moz-flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   flex-direction: column;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
   justify-content: space-between;
   height: 100%;
   position: relative;
@@ -262,10 +378,14 @@
   border: 2px solid #7F9B44;
   border-radius: 50%;
   margin: 20px 0;
+  -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+  -moz-transition: background-color 0.3s ease, -moz-transform 0.3s ease;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .ScrollBullet.active {
   background: #7F9B44;
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
   transform: scale(1.3);
 }
 
@@ -279,10 +399,12 @@
   .Col50,
   .LeftColServices {
     width: 100%;
-    margin-top: 0px!important;
+    margin-top: 0px !important;
   }
   .NivelContent {
+    display: -webkit-grid;
     display: grid;
+    -webkit-grid-template-columns: 40px 1fr;
     grid-template-columns: 40px 1fr;
     gap: 20px;
     align-items: start;
@@ -290,18 +412,24 @@
   .ScrollIndicator {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     align-self: start;
     height: 100vh;
     margin: 0;
+    display: -webkit-flex;
+    display: -moz-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .Col50,
   .LeftColServices {
+    -webkit-grid-column: 2 / 3;
     grid-column: 2 / 3;
     width: 100%;
   }
@@ -315,7 +443,7 @@
   .Col50,
   .LeftColServices {
     width: 100%;
-    margin-top: 0px!important;
+    margin-top: 0px !important;
   }
   .SubContainerServices {
     width: 100%;
@@ -329,16 +457,17 @@
     border-radius: 20px;
   }
   .ServiciosSelector {
+    -webkit-justify-content: center;
     justify-content: center;
   }
   .ServicioButton {
     display: none !important;
   }
   .ServicioButton.active {
+    display: -webkit-flex !important;
+    display: -moz-flex !important;
     display: flex !important;
   }
-
-
 }
 
 /* Responsive: up to 480px */
@@ -349,14 +478,17 @@
     display: none;
   }
   .NivelContent {
+    display: -webkit-flex;
+    display: -moz-flex;
     display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
     flex-direction: column;
     gap: 0;
-    padding: 0 10px;
+    padding: 0 20px;
     align-items: start;
   }
   .MainBannerServices {
-    padding: 0 10px;
+    padding: 0 20px;
   }
-  
 }
