@@ -38,12 +38,17 @@ function createServiciosComponent() {
         </div>
   
         <div class="ServiciosNavDots">
-          <button id="prevServicio" class="NavArrow" type="button">‹</button>
+
+        <button id="prevServicio" class="NavArrow" type="button">
+          <img src="assets/Icons/General/ArrowLeft.svg" alt="Servicio anterior">
+        </button>   
           <span class="dot" data-slide="0"></span>
           <span class="dot" data-slide="1"></span>
           <span class="dot" data-slide="2"></span>
           <span class="dot" data-slide="3"></span>
-          <button id="nextServicio" class="NavArrow" type="button">›</button>
+          <button id="nextServicio" class="NavArrow" type="button">
+            <img src="assets/Icons/General/ArrowRight.svg" alt="Siguiente servicio">
+          </button>
         </div>
       </div>
   

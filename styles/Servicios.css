@@ -93,13 +93,29 @@
   border: 1px solid #182031;
   background-color: white;
   font-size: 30px;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
-.NavArrow.disabled {
+
+.NavArrow img{
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease-in-out;
+}
+
+.NavArrow:not(:disabled):hover {
+  background-color: #182031;
+  border-color: #182031;
+}
+
+.NavArrow:not(:disabled):hover img {
+  filter: invert(100%) brightness(100%);
+}
+
+.NavArrow:disabled {
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-/* Pill Variants */
 .Pill1 {
   border: 1px solid #859a50;
 }
