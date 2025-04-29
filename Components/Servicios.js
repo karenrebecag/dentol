@@ -117,7 +117,7 @@ function createServiciosComponent() {
   <div class="NivelContent ">
     <div class="Col50">
      <div class="SubContainerServices" data-step="0">
-         <h3 class="HeadingSmall">Consulta y <br> diagnóstico</h3>
+         <h3 class="HeadingSmall">Consulta y diagnóstico</h3>
          <h4 class="SubHeadingVerde">Consulta y diagnóstico</h4>
          <p class="Paragraph"> 
              La consulta y diagnóstico dental es esencial para mantener una 
@@ -125,7 +125,7 @@ function createServiciosComponent() {
              evaluación detallada de dientes, encías y tejidos orales para 
              detectar problemas como caries, enfermedad periodontal o 
              maloclusiones. En algunos casos, se utilizan radiografías 
-             para un análisis más preciso. <br> <br>
+             para un análisis más preciso. <br>
              Este servicio permite diseñar un plan de tratamiento 
              personalizado y prevenir afecciones antes de que avancen. 
              También es el momento ideal para resolver dudas sobre higiene 
@@ -141,7 +141,7 @@ function createServiciosComponent() {
     
 
   <div class="SubContainerServices" data-step="1">
-         <h3 class="HeadingSmall">Aplicación <br> de flúor </h3>
+         <h3 class="HeadingSmall">Aplicación de flúor </h3>
          <h4 class="SubHeadingVerde">Recomendado cada 6 meses </h4>
          <p class="Paragraph"> 
              El flúor fortalece el esmalte dental y previene la formación de caries. 
@@ -165,7 +165,7 @@ function createServiciosComponent() {
 
   <div class="SubContainerServices" data-step="2">
      <h3 class="HeadingSmall">
-     Técnica de <br> cepillado y uso <br> de hilo dental 
+     Técnica de cepillado y uso de hilo dental 
      </h3>
   <h4 class="SubHeadingVerde">Recomendado cada 6 meses </h4>
   <p class="Paragraph">     
