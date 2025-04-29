@@ -1,34 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Bungee+Tint&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geologica:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yellowtail&display=swap');
 
 :root {
-    --mainFont: "Geologica", sans-serif;
-    --blueMain:#132035;
-    --white: white;
-    --verde: #d4e1b1;
-    --verdeFuerte: #7F9B44;
-
-    --borderRadius: 47px;
-
-
-    /* Pesos de Fonts */
-    --light: 300;
-    --normal: 400;
-    --bold: 600;
-    --extraBold: 800;
-
-
-   /* Tamaños de Fonts */
-   --h1: 70px;
-   --h2: 60px;
-   --h3: 50px;
-   --h4: 40px;
-   --h5: 30px;
-   --h6: 25px;
-   --body-normal: 20px;
-   --body-small: 16px;
-
- }
-
+  --mainFont: "Geologica", sans-serif;
+  --blueMain: #132035;
+  --white: white;
+  --verde: #d4e1b1;
+  --verdeFuerte: #7F9B44;
+  --borderRadius: 47px;
+  --light: 300;
+  --normal: 400;
+  --bold: 600;
+  --extraBold: 800;
+  --h1: 52px;
+  --h2: 46px;
+  --h3: 38px;
+  --h4: 28px;
+  --h5: 22px;
+  --h6: 18px;
+  --body-normal: 16px;
+  --body-small: 14px;
+}
  /* Reponsive de Tipografías */
  @media (max-width: 1200px) {
   :root {
