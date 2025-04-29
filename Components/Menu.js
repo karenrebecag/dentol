@@ -45,13 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
     `;
   
-    // Añadir a DOM
     headerContainer.appendChild(logo);
     headerContainer.appendChild(menuButton);
     document.body.appendChild(headerContainer);
     document.body.appendChild(overlay);
   
-    // Eventos
     menuButton.addEventListener("click", () => {
       overlay.classList.add("active_dentol");
       overlay.classList.remove("fadeout_dentol");
@@ -62,6 +60,35 @@ document.addEventListener("DOMContentLoaded", () => {
       overlay.classList.remove("active_dentol");
       setTimeout(() => {
         overlay.classList.remove("fadeout_dentol");
-      }, 400);
+      }, 400); 
     });
+  
+    const tryObserveServicios = () => {
+      const header = document.querySelector('.header_dentol');
+      const targetSection = document.querySelector('.ServiciosComponent');
+  
+      if (header && targetSection) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (window.innerWidth < 768) { 
+              if (entry.isIntersecting) {
+                header.classList.add('header_hidden_dentol');
+              } else {
+                header.classList.remove('header_hidden_dentol');
+              }
+            } else {
+              header.classList.remove('header_hidden_dentol'); 
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+  
+        observer.observe(targetSection);
+      } else {
+        setTimeout(tryObserveServicios, 100); 
+      }
+    };
+  
+    tryObserveServicios();
   });

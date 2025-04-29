@@ -11,8 +11,14 @@
     right: 0;
     z-index: 1000;
     height: 100px;
+    transition: opacity 0.4s ease;
+    opacity: 1; /* Siempre visible por defecto */
   }
   
+  .header_hidden_dentol {
+    opacity: 0;
+    pointer-events: none;
+  }
   .logo_dentol {
     height: 60px;
   }
