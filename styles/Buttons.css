@@ -96,4 +96,17 @@
     height:50px!important;  
     font-weight: var(--bold);
     }
+
+    .WhatsAppButton:hover .icon{
+        width: 2.2em;
+    }
+
+    
+    .WhatsAppButton:active .icon {
+        transform: none;
+        top:10px;
+    }
+    
   }
+
+
