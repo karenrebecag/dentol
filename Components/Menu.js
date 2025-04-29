@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==== OBSERVADOR DE SECCIÓN PARA OCULTAR HEADER ====
     const tryObserveServicios = () => {
       const header = document.querySelector('.header_dentol');
-      const targetSection = document.querySelector('.ServiciosComponent, .footer_dentol');
+      const targetSection = document.querySelector('.ServiciosComponent,.footer_dentol');
   
       if (header && targetSection) {
         const observer = new IntersectionObserver(entries => {
@@ -92,3 +92,4 @@ document.addEventListener("DOMContentLoaded", () => {
   
     tryObserveServicios();
   });
+  

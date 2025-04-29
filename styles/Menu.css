@@ -56,7 +56,7 @@
     right: 0;
     bottom: 0;
     background: #e8f6b7;
-    z-index: 2000;
+    z-index: 10000;
     padding: 40px 20px;
     overflow-y: auto;
   

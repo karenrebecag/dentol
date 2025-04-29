@@ -63,6 +63,8 @@
     font-size: var(--body-small);
     font-family: var(--mainFont);
     font-weight: var(--normal);
+    text-decoration: none;
+
   }
   .ParagraphBold {
     color: var(--blueMain);
@@ -76,5 +78,6 @@
     font-size: var(--body-small);
     font-family: var(--mainFont);
     font-weight: var(--normal);
+    margin: 0px!important;
   }
 
