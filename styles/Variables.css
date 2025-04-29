@@ -42,3 +42,17 @@
     --body-small: 14px;
   }
 }
+
+ /* Reponsive de Tipografías */
+ @media (max-width: 480px) {
+  :root {
+    --h1: 42px;
+    --h2: 28px;
+    --h3: 24px;
+    --h4: 22px;
+    --h5: 18px;
+    --h6: 16px;
+    --body-normal: 18px;
+    --body-small: 14px;
+  }
+}
