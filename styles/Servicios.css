@@ -489,10 +489,11 @@
     align-items: start;
   }
   @supports (-webkit-appearance: none) {
-    #nextServicio img {
-     transform: rotate(180deg);
+    @supports (-webkit-touch-callout: none) {
+      #nextServicio img {
+        transform: rotate(180deg);
+      }
     }
-  }
   .MainBannerServices {
     padding: 0 20px;
   }
