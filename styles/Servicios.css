@@ -499,3 +499,16 @@
   }
 }
 }
+
+ /* Reponsive de Tipografías */
+ @media (max-width: 368px) {
+
+    .ServiciosNavDots {
+      padding: 10px 20px;
+    }
+    .NavArrow{
+      width: 30px;
+      height: 30px;
+    }
+
+}
