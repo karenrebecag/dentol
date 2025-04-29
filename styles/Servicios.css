@@ -1,0 +1,374 @@
+/* Main Banner */
+
+.MainBannerServices {
+    background-image: url('/assets/BannerServicios.png');
+    background-size: cover;
+    background-position: center;
+
+    padding: 60px;
+    min-height: 758px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+  }
+
+  .StickyBar{
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
+    z-index: 1000;
+    background-color: white; 
+  }
+
+  .ServiciosSelector{
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    will-change: transform;
+  }
+
+  .ServiciosSelectorWrapper, .ServiciosSelector{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+  }
+
+  .ServiciosNavDots{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .Pill{
+    border-radius: 55px;
+    padding: 10px 20px;
+    display: flex;
+    text-align: start;
+    background: white;
+    min-width: 250px;
+    gap: 10px;
+  }
+
+  .PillIcon {
+    width: 41px;
+    height: 40px;
+  }
+
+  .PillTitle1, .PillTitle2 , .PillTitle3, .PillTitle4 {
+    font-size: var(--h6);
+    font-weight: var(--bold);
+  }
+
+  .PillSubTitle1, .PillSubTitle2 , .PillSubTitle3, .PillSubTitle4 {
+    font-size: var(--normal);
+    font-weight: var(---normal);
+  }
+
+
+  .NavArrow{
+    border-radius: 100px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #182031;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+
+
+  .Pill1 {
+    border: 1px solid #859a50;
+    transition: all 0.3s ease-in-o ut;
+  }
+  
+  .Pill1:hover {
+    background: rgba(133, 154, 80, 0.7); 
+    transform: scale(1.05);Cl
+  }
+  
+  .Pill1.active {
+    background: var(--verde); 
+    transform: scale(1.05);
+    border: none;
+
+  }
+  
+  .Pill2 {
+    border: 1px solid #979068;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Pill2:hover {
+    background: rgba(151, 144, 104, 0.7);
+    transform: scale(1.04);
+  }
+  
+  .Pill2.active {
+    background: #e1dab1; 
+    transform: scale(1.04);
+    border: none;
+  }
+  
+  .Pill3 {
+    border: 1px solid #ae7d45;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Pill3:hover {
+    background: rgba(174, 125, 69, 0.7); 
+    transform: scale(1.04);
+  }
+  
+  .Pill3.active {
+    background: #efcfa9; 
+    transform: scale(1.04);
+    border: none;
+  }
+  
+  .Pill4 {
+    border: 1px solid #6a2a28;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .Pill4:hover {
+    background: rgba(106, 42, 40, 0.7);
+    transform: scale(1.04);
+  }
+  
+  .Pill4.active {
+    background: #c96f6c;
+    border: none;
+    transform: scale(1.04);
+  }
+
+/* ===== Dots ===== */
+
+.dot {
+    width: 43px;
+    height: 5px;
+    background: #cfd8dc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .dot-active {
+    background: #7F9B44; 
+  }
+  
+  .dot-inactive {
+    background: #cfd8dc;
+  }
+  
+  /* ===== Flechas (ya las tienes) ===== */
+  .NavArrow.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+  
+  /* ===== Animación de entrada Pills ===== */
+  
+  
+  .Pill {
+    animation: slideIn 0.5s ease;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+.NivelContent{
+    padding: 0px 60px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    animation: slideIn 0.5s ease;
+
+}
+
+.LeftColServices{
+    margin-top: 350px;
+}
+
+.SubContainerServices{
+    max-width: 712px;
+    margin-bottom: 100px;
+}
+
+  .imgServices{
+    max-height: 320px;
+    min-width: 100%;
+    object-fit: cover;
+    background-position: center;
+  }
+
+  .imgServices_borderRight {
+    border-radius: 50px 0px 190px 50px;
+  }
+  .imgServices_borderLeft {
+    border-radius: 50px 0px 50px 190px;
+  }
+
+
+
+
+  /* ==== Scroll Indicator General ==== */
+.ScrollIndicator {
+  position: relative;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+/* ==== Línea que se ilumina ==== */
+.ScrollLine {
+  position: absolute;
+  top: 0;
+  width: 4px;
+  height: 0;
+  background-color: #859a50; 
+  border-radius: 2px;
+  transition: height 0.01s ease-in-out;
+  z-index: 1;
+}
+
+/* ==== Contenedor de los bullets ==== */
+.ScrollBullets {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==== Bullets individuales ==== */
+.ScrollBullet {
+  width: 14px;
+  height: 14px;
+  background-color: #cfd8dc; 
+  border: 2px solid #7F9B44; 
+  border-radius: 50%;
+  margin: 20px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* ==== Bullet activo (cuando la sección entra al viewport) ==== */
+.ScrollBullet.active {
+  background-color: #7F9B44; 
+  transform: scale(1.3); 
+}
+
+
+.SubContainerServices {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+
+  .Col50{
+    width: 50%;
+  }
+
+  @media (max-width: 1199px) {
+    .NivelContent {
+      display: grid;
+      grid-template-columns: 40px 1fr; 
+      gap: 20px;
+      align-items: start;
+    }
+  
+    .ScrollIndicator {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3; 
+      position: sticky;
+      top: 0;
+      align-self: start;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .Col50,
+    .LeftColServices {
+      grid-column: 2 / 3;
+      width: 100%;
+    }
+    .SubContainerServices{
+        max-width: none;
+    }
+  }
+
+
+/* Responsividad estricta para <768px */
+@media (max-width: 768px) {
+
+  .Col50, .LeftColServices {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .SubContainerServices {
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 60px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .imgServices {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .ServiciosSelector {
+    justify-content: center;
+  }
+
+  .ServicioButton {
+    display: none !important;
+  }
+
+  .ServicioButton.active {
+    display: flex !important;
+  }
+
+  
+}
+@media (max-width: 480px) {
+
+  .ScrollIndicator, .ScrollLine, .ScrollBullets {
+    display: none;
+  }
+  .NivelContent {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 40px 1fr;
+    gap: 0px;
+    padding: 0px 10px;
+    align-items: start;
+}
+.MainBannerServices{
+  padding: 0px 10px;
+
+}
+}
