@@ -26,11 +26,17 @@
     font-family: var(--mainFont);
     font-weight: var(--bold);
  }
-  .SubHeadingVerde {
-    color: var(--verdeFuerte);
-    font-size: var(--body-normal);
-    font-family: var(--mainFont);
-    font-weight: var(--bold);
+ .SubHeadingWhite {
+  color: var(--white);
+  font-size: var(--h6);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+}
+.SubHeadingVerde {
+  color: var(--verdeFuerte);
+  font-size: var(--body-normal);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
  }
  .SubHeadingRojo{
   color: #732525;
@@ -52,6 +58,12 @@
     font-family: var(--mainFont);
     font-weight: var(--normal);
   }
+  .ParagraphWhite {
+    color: var(--white);
+    font-size: var(--body-small);
+    font-family: var(--mainFont);
+    font-weight: var(--normal);
+  }
   .ParagraphBold {
     color: var(--blueMain);
     font-size: var(--h6);
@@ -59,24 +71,10 @@
     font-weight: var(--bold);
   }
   
+  .SmallText {
+    color: var(--blueMain);
+    font-size: var(--body-small);
+    font-family: var(--mainFont);
+    font-weight: var(--normal);
+  }
 
-footer {
-  background-color: var(--blueMain);
-  color: var(--white);
-}
-
-.menu_overlay_dentol {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease;
-}
-
-.menu_overlay_dentol.active_dentol {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.menu_overlay_dentol.fadeout_dentol {
-  opacity: 0;
-  pointer-events: none;
-}

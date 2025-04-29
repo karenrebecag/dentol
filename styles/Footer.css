@@ -1,0 +1,51 @@
+.footer_dentol {
+    background-color: #0c1a2c;
+    color: white;
+    padding: 60px 50px 30px 30px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .footer_top_dentol {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+    padding: 0px 30px;
+  }
+  
+  .footer_logo_dentol img {
+    width: 160px;
+    margin-bottom: 10px;
+  }
+  
+  .footer_line_dentol {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.558);
+    margin-bottom: 30px;
+  }
+  
+  .footer_bottom_dentol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer_socials_dentol a img {
+    width: 24px;
+    margin-right: 20px;
+  }
+  .footer_rights_dentol{
+    background: var(--verde);
+    width: 100%;
+    color: var(--blueMain);
+    padding: 2px 30px;
+  }
+    .footer_dentol,
+    .footer_rights_dentol {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 500ms ease, transform 1s ease;
+    }
