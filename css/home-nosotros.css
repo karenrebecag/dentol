@@ -1,0 +1,36 @@
+#home-nosotros{
+background:var(--grisazulado);
+margin-top:150px;
+}
+
+#home-nosotros.imagepath-text .left{
+margin-top:-150px;
+}
+
+
+#home-nosotros h1{
+background-color:rgba(255,255,255,0);
+text-align: center;
+}
+#home-nosotros .content{
+background-color:rgba(255,255,255,0);
+    text-align: left;
+    padding-top:0px;
+}
+
+@media (min-width: 992px) {
+ #home-nosotros h1{
+text-align: left;
+}   
+
+  
+#home-nosotros .content{
+    text-align: left;
+    padding:0px 30px 60px 40%;
+}}
+
+@media (min-width: 1200px) { 
+#home-nosotros .left{
+margin-top:-150px;
+} 
+}

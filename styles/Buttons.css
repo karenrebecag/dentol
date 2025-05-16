@@ -1,0 +1,170 @@
+/* Reset de Botones */
+  button    { 
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+  }
+/* =============== Normal Button =============== */
+.NormalButton {
+    background-color: transparent;
+    color: var(--blueMain);
+    font-size: var(--h6);
+    font-family: var(--mainFont);
+    font-weight: var(--normal);
+    border-radius: var(--borderRadius);
+    padding: 0px 20px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--blueMain);
+    box-shadow: 0 0 0 0 black;
+}
+
+.NormalButton:hover {
+    background-color: var(--white);
+    color: var(--blueMain);
+}
+
+.NormalButton:active {
+    transform: translateY(2px) translateX(1px);
+    box-shadow: 0 0 0 0 black;
+}
+
+/* =============== WhatsApp Button =============== */
+.WhatsAppButton {
+    background: var(--blueMain);
+    color: var(--white);
+    font-family: var(--mainFont);
+    font-size: var(--h6);
+    font-weight: var(--normal);
+    border-radius: var(--borderRadius);
+    padding:  0.35em 3.3em 0.35em 1.2em;
+    border: none;
+    letter-spacing: 0.05em;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.WhatsAppButton .icon {
+    background: var(--verde);
+    margin-left: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 2em;
+    right: 0.3em;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.WhatsAppButton .icon img {
+    width: 1.1em;
+    height: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.WhatsAppButton:hover .icon {
+    width: calc(100% - 0.6em);
+    background: var(--white);
+}
+
+.WhatsAppButton:hover .icon img {
+    transform: translateX(0.1em);
+}
+
+.WhatsAppButton:active .icon {
+    transform: scale(0.95);
+}
+
+
+
+/* =============== WhatsApp Button Green=============== */
+.WhatsAppButtonGreen {
+    background-color: var(--verde);
+    color: var(--blueMain);
+    font-family: var(--mainFont);
+    font-size: var(--h6);
+    font-weight: var(--normal);
+    border-radius: var(--borderRadius);
+    padding:  0.35em 3.3em 0.35em 1.2em;
+    border: none;
+    letter-spacing: 0.05em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.WhatsAppButtonGreen .icon {
+    background: var(--blueMain);
+    margin-left: 1em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 2em;
+    right: 0.3em;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.WhatsAppButtonGreen .icon img {
+    width: 1.1em;
+    height: 1.1em;
+    filter: invert(100%) brightness(100);
+    transition: transform 0.3s ease;
+}
+
+.WhatsAppButtonGreen:hover .icon {
+    width: calc(100% - 0.6em);
+    background: var(--blueMain);
+}
+
+.WhatsAppButtonGreen:hover .icon img {
+    transform: translateX(0.1em);
+}
+
+.WhatsAppButtonGreen:active .icon {
+    transform: scale(0.95);
+}
+
+/* =============== RESPONSIVE FONT SIZES PARA BOTONES =============== */
+
+/* Para pantallas chicas: smartphones (< 768px) */
+@media (max-width: 767px) {
+  .NormalButton,
+  .WhatsAppButton {
+    text-align: start;
+    height:50px!important;  
+    font-weight: var(--bold);
+    }
+
+    .WhatsAppButton:hover .icon{
+        width: 2.2em;
+    }
+
+    
+    .WhatsAppButton:active .icon {
+        transform: none;
+        top:10px;
+    }
+    
+  }
+
+

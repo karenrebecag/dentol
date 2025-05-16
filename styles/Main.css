@@ -1,0 +1,83 @@
+.Heading{
+    color: var(--blueMain);
+    font-size: var(--h1);
+    font-family: var(--mainFont);
+    font-weight: var(--extraBold);
+    text-transform: uppercase;
+  }
+
+  .HeadingSmall{
+    color: var(--blueMain);
+    font-size: var(--h3);
+    font-family: var(--mainFont);
+    font-weight: var(--bold);
+    line-height: 60px;
+  }
+  
+  .SubHeading {
+     color: var(--blueMain);
+     font-size: var(--body-normal);
+     font-family: var(--mainFont);
+     font-weight: var(--light);
+  }
+  .SubHeadingBold {
+    color: var(--blueMain);
+    font-size: var(--h6);
+    font-family: var(--mainFont);
+    font-weight: var(--bold);
+ }
+ .SubHeadingWhite {
+  color: var(--white);
+  font-size: var(--h6);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+}
+.SubHeadingVerde {
+  color: var(--verdeFuerte);
+  font-size: var(--body-normal);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+ }
+ .SubHeadingRojo{
+  color: #732525;
+  font-size: var(--body-normal);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+ }
+ .SubHeadingCafe{
+  color: #B77A39;
+  font-size: var(--body-normal);
+  font-family: var(--mainFont);
+  font-weight: var(--bold);
+ }
+
+  
+  .Paragraph {
+    color: var(--blueMain);
+    font-size: var(--body-normal);
+    font-family: var(--mainFont);
+    font-weight: var(--normal);
+  }
+  .ParagraphWhite {
+    color: var(--white);
+    font-size: var(--body-small);
+    font-family: var(--mainFont);
+    font-weight: var(--normal);
+    text-decoration: none;
+
+  }
+  .ParagraphBold {
+    color: var(--blueMain);
+    font-size: var(--h6);
+    font-family: var(--mainFont);
+    font-weight: var(--bold);
+  }
+  
+  .SmallText {
+    color: var(--blueMain);
+    font-size: var(--body-small);
+    font-family: var(--mainFont);
+    font-weight: var(--normal);
+    margin: 0px!important;
+  }
+

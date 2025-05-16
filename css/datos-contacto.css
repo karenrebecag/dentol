@@ -1,0 +1,30 @@
+/*///////////////////////////////////*/
+
+/**/
+
+#datos-contacto h6{
+margin-bottom:0px;
+}
+
+#datos-contacto .col-12{
+  margin-bottom:10px;
+}
+
+
+
+#datos-contacto .item{
+background-color: var(--verdedentol);
+    border-radius: 20px;
+    padding:25px 10px 15px 10px;
+    margin-bottom:10px;
+      display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+}
+
+.d-lg-block{
+height:2px;
+}
+
+/*///////////////////////////////////*/

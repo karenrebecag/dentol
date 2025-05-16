@@ -1,0 +1,113 @@
+/*///////////////////////////////////*/
+
+/**/
+.home-pacientes.page{
+    text-align: left;
+    background-color:var(--verdedentol);
+    margin-bottom:0;
+    padding:3rem 0;
+}
+
+.home-pacientes.page .cont{
+max-width: 1200px;
+}
+
+
+.home-pacientes.page .cont .card1.item {
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 506"><path fill="white" d="M4,497.6h247.8c79.3,0,143.6-64.3,143.6-143.6V143.6C395.4,64.3,331.1,0,251.8,0L86,0C40.7,0,4,36.7,4,82V497.6z"/></svg>') no-repeat center;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 506"><path fill="white" d="M4,497.6h247.8c79.3,0,143.6-64.3,143.6-143.6V143.6C395.4,64.3,331.1,0,251.8,0L86,0C40.7,0,4,36.7,4,82V497.6z"/></svg>') no-repeat center;
+ color:#ffffff;
+}
+    
+.home-pacientes .item.adolescentes{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 100%), url("../images/dentol-adolescente.jpg");
+}
+
+
+
+
+.home-pacientes .item.adultos{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%),  url("../images/dentol-adulto.jpg");
+}
+
+.home-pacientes .item.adulto-mayor{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%), url("../images/dentol-adulto-mayor-home.jpg");
+}
+
+.home-pacientes .item.embarazadas{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%), url("../images/dentol-embarazadas-home.jpg");
+}
+
+.home-pacientes .item.ansiedad{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%), url("../images/dentol-ansiedad-home.jpg");
+}
+
+.home-pacientes .item.cronicas{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%), url("../images/dentol-cronicas-home.jpg");
+}
+
+.home-pacientes .item.deportistas{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%), url("../images/dentol-deportistas-home.jpg");
+}
+
+.home-pacientes .item.alergias{
+background-image:linear-gradient(180deg,rgba(255, 255, 255, 0.03) 0%, rgba(19, 32, 53, 1) 99% , rgba(255, 255, 255, 1) 100%), url("../images/dentol-alergias-home.jpg");
+}
+
+
+
+.home-pacientes.page .cont > *:nth-child(even) {
+transform:translateY(0%);
+}
+
+.home-pacientes.page .cont .item {
+border-radius: 0px !important;
+    margin-bottom:20px;
+}
+
+.home-pacientes.page .container{
+min-width:none;
+}
+
+.home-pacientes.page.especiales{
+    text-align: left;
+    background-color:#ffffff;;
+}
+
+.home-pacientes.page .row > div:nth-child(even)  .card1.item:hover::before,
+.home-pacientes.page .row > div:nth-child(odd)  .card1.item:hover::before{
+  transform: translateX(-60px) translateY(60px);
+}
+
+
+
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .home-pacientes.page .cont .card1.item {
+border-radius: 50px !important;
+mask:none !important;
+        -webkit-mask:none !important;
+        
+}
+}
+    @media (min-width: 768px) {
+    
+.home-pacientes.page .card1.item .arrow  {
+    top:13%!important;
+     right:14%!important;    
+         
+     }
+
+}
+
+ @media (min-width: 992px){   
+     
+	 
+
+}
+ @media (min-width: 1200px){   
+.home-pacientes.page .row > div:nth-child(even)  .card1.item:hover::before,
+.home-pacientes.page .row > div:nth-child(odd)  .card1.item:hover::before{
+transform: scale(1.2) translateX(-60px) translateY(60px);
+}}

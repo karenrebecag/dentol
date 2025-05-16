@@ -1,0 +1,67 @@
+
+.imagepath-text .left{
+text-align:center;
+/*margin-top:-150px;*/
+}
+
+.imagepath-text .left img{
+max-width:330px;
+}
+
+
+.imagepath-text h1{
+padding:40px 30px;
+background-color:#ffffff;
+        margin: 0 auto;
+    text-align:center;
+}
+
+
+#disenosonrisa .txt{
+background-color: var(--verdedentol);  
+}
+
+.imagepath-text .content{
+padding:30px;
+background-color: var(--verdedentol);  
+}
+
+
+@media (min-width: 992px) {
+.imagepath-text .left{
+position:absolute;
+z-index: 999;
+    margin-top:0px;
+	padding-right:5rem;
+}
+    
+.imagepath-text .left img{
+max-width:none;
+    width:100%;
+}
+    
+.imagepath-text h1{
+padding:40px 30px 20px 40%;
+background-color:#ffffff;
+  margin: 0;
+     text-align:left;
+}
+
+.imagepath-text .content{
+padding:60px 30px 60px 38%;
+}
+
+}
+
+
+@media (min-width: 1500px) {
+.imagepath-text .container{
+max-width:1440px;
+}
+}
+
+@media (min-width: 1800px) {
+.imagepath-text .container{
+max-width:1740px;
+}
+}

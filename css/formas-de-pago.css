@@ -1,0 +1,30 @@
+/*///////////////////////////////////*/
+
+/**/
+
+#formas-de-pago h6{
+margin-bottom:0px;
+}
+
+#formas-de-pago .col-12{
+  margin-bottom:10px;
+}
+
+
+
+#formas-de-pago .item{
+background-color: var(--verdedentol);
+    border-radius: 20px;
+    padding:25px 10px 15px 10px;
+    margin-bottom:10px;
+      display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+}
+
+.d-lg-block{
+height:2px;
+}
+
+/*///////////////////////////////////*/
