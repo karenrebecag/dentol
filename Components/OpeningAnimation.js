@@ -1,7 +1,8 @@
 /**
  * OpeningAnimation.js
  * A self-contained vanilla JS component that injects an opening animation with a logo and sliding images.
- * Automatically runs on page load when included as a script.
+ * Automatically runs as early as possible when included as a script, prioritized to load first.
+ * Includes media query for 60% smaller logo on mobile.
  */
 (function () {
     class OpeningAnimation {
@@ -11,18 +12,23 @@
         }
 
         init() {
-            // Inject CSS
+            // Inject CSS immediately
             this.injectStyles();
-            // Inject HTML
+            // Inject HTML at the start of the body
             this.injectHTML();
-            // Run GSAP animation on load
+            // Run GSAP animation on DOMContentLoaded
             this.setupAnimation();
         }
 
         injectStyles() {
             const style = document.createElement("style");
             style.textContent = `
-
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+                * {
+                    padding: 0;
+                    margin: 0;
+                    box-sizing: border-box;
+                }
                 .containerOpening {
                     width: 100%;
                     height: 100%;
@@ -32,14 +38,14 @@
                 .opening {
                     width: 100%;
                     height: 100vh;
-                    position: relative;
                     position: fixed;
                     top: 0;
                     left: 0;
-                    z-index: 99;
+                    z-index: 9999; /* High z-index to ensure it’s on top */
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    background-color: #D1E1AC; /* Match mask color for smooth transition */
                 }
                 .opening__mask {
                     width: 100%;
@@ -56,9 +62,16 @@
                     width: 300px;
                     height: 300px;
                     z-index: 2;
-                    opacity: 0; 
+                    opacity: 0;
                 }
 
+                /* Media query for mobile: 60% smaller logo */
+                @media (max-width: 768px) {
+                    .opening__logo {
+                        width: 120px; /* 300px * 0.4 */
+                        height: 120px; /* 300px * 0.4 */
+                    }
+                }
             `;
             document.head.appendChild(style);
         }
@@ -74,18 +87,27 @@
                 </div>
 
             `;
-            document.body.appendChild(container);
+            // Inject at the start of the body to prioritize rendering
+            document.body.prepend(container);
         }
 
         setupAnimation() {
-            // Check GSAP
+            // Check if GSAP is loaded
             if (typeof gsap === "undefined") {
                 console.error("GSAP is not loaded. Please include GSAP library.");
                 return;
             }
 
-            // GSAP timeline 
-            const openingTL = gsap.timeline();
+            // Block scrolling during animation
+            document.body.style.overflow = "hidden";
+
+            // GSAP timeline animation (30% faster, as previously set)
+            const openingTL = gsap.timeline({
+                onComplete: () => {
+                    // Restore scrolling after animation
+                    document.body.style.overflow = "";
+                }
+            });
             openingTL
                 .fromTo(".opening__logo", { autoAlpha: 0 }, { autoAlpha: 1, delay: 0.38, duration: 0.38 })
                 .to(".opening__logo", { duration: 0.38, autoAlpha: 0, scale: 1.1, filter: "blur(5px)" }, "+=0.77")
@@ -100,8 +122,8 @@
         }
     }
 
-    // Instantiate the component on page load
-    window.addEventListener("load", () => {
+    // Instantiate the component as early as possible
+    document.addEventListener("DOMContentLoaded", () => {
         new OpeningAnimation();
     });
 })();

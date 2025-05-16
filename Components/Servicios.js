@@ -572,7 +572,7 @@ function initGSAPAnimations() {
                 end: 'bottom 20%',
                 toggleActions: 'play none none reverse'
             },
-            x: 30, // Solo desplazamiento
+            x: 30,
             duration: duration,
             stagger: stagger,
             ease: 'power2.out'
@@ -746,7 +746,7 @@ function initGSAPAnimations() {
 
   updateContent(currentIndex);
   updateSelectorState('initial');
-  isInitialLoad = false; // Desactivar la bandera después de la carga inicial
+  isInitialLoad = false;
 }
 
 window.initServiciosComponent = initServiciosComponent;
