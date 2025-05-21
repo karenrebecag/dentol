@@ -1,0 +1,193 @@
+/*///////////////////////////////////*/
+/*SECTION DENTOL INTRO*/
+.banner {
+  padding: 50px 0 400px;
+  border-radius: 0 0 350px 350px;
+	background-repeat: no-repeat;
+	
+}
+
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 60%, rgba(209, 226, 172, 0) 65%), url("/images/banner-nosotros2.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+
+.banner.home {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 55%, rgba(209, 226, 172, 0) 70%), url("/images/banner-home4.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:200% auto;
+	background-repeat: no-repeat;
+}
+
+.banner.servicios {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 70%, rgba(209, 226, 172, 0) 90%), url("/images/banner-servicios2.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+
+.banner-home-logo{
+text-align: center;
+}
+
+@media (min-width: 450px) {
+.banner.servicios {
+ background: linear-gradient(180deg, rgba(209, 226, 172, 1) 55%, rgba(209, 226, 172, 0) 70%), url("/images/banner-servicios2.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:120% auto;
+	background-repeat: no-repeat;
+}}
+
+@media (min-width: 510px) {
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 0%, rgba(209, 226, 172, 1) 50%, rgba(209, 226, 172, 0) 60%), url("/images/banner-nosotros2.jpg");
+ background-position: 80% calc(100% + 50px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+.banner.servicios {
+ background: linear-gradient(180deg, rgba(209, 226, 172, 1) 45%, rgba(209, 226, 172, 0) 75%), url("/images/banner-servicios2.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:120% auto;
+	background-repeat: no-repeat;
+}
+}
+	
+@media (min-width: 576px) {
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 0%, rgba(209, 226, 172, 1) 40%, rgba(209, 226, 172, 0) 60%), url("/images/banner-nosotros2.jpg");
+ background-position: 80% calc(100% + 50px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+
+.banner.home {
+ background: linear-gradient(180deg, rgba(209, 226, 172, 1) 45%, rgba(209, 226, 172, 0) 75%), url("/images/banner-home4.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:120% auto;
+	background-repeat: no-repeat;
+}
+	
+	.banner.servicios {
+ background: linear-gradient(180deg, rgba(209, 226, 172, 1) 45%, rgba(209, 226, 172, 0) 75%), url("/images/banner-servicios2.jpg");
+ background-position: 80% calc(100% + 0px);
+	background-size:120% auto;
+	background-repeat: no-repeat;
+}
+}
+
+	@media (min-width: 655px) {
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 0%, rgba(209, 226, 172, 1) 30%, rgba(209, 226, 172, 0) 50%), url("/images/banner-nosotros2.jpg");
+ background-position: 80% calc(100% + 120px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+		
+		.banner.servicios {
+ background: linear-gradient(180deg, rgba(209, 226, 172, 1) 35%, rgba(209, 226, 172, 0) 55%), url("/images/banner-servicios2.jpg");
+ background-position: 80% calc(100% + 60px);
+	background-size:120% auto;
+	background-repeat: no-repeat;
+}
+
+}
+
+	@media (min-width: 768px) {
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 0%, rgba(209, 226, 172, 1) 25%, rgba(209, 226, 172, 0) 45%), url("/images/banner-nosotros2.jpg");
+ background-position: 80% calc(100% + 150px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}
+
+
+
+}
+
+	@media (min-width: 800px) {
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 0%, rgba(209, 226, 172, 1) 15%, rgba(209, 226, 172, 0) 35%), url("/images/banner-nosotros2.jpg");
+ background-position: 80% calc(100% + 150px);
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}}
+
+	@media (min-width: 900px) {
+.banner.nosotros {
+  background:linear-gradient(180deg, rgba(209, 226, 172, 1) 0%, rgba(209, 226, 172, 1) 5%, rgba(209, 226, 172, 0) 25%), url("/images/banner-nosotros2.jpg");
+ background-position: 0 150px;
+	background-size:100% auto;
+	background-repeat: no-repeat;
+}}
+
+	
+@media (min-width: 992px) {
+  .banner .buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .banner {
+    padding: 150px 0 150px;
+  }
+  .banner.nosotros {
+  background:linear-gradient(90deg, rgba(209, 226, 172, 1) 50%, rgba(209, 226, 172, 0) 75%), url("/images/banner-nosotros2.jpg");
+ background-position: left, 110% 0px;
+	background-size:100%, 58% auto;
+	background-repeat: no-repeat;
+}
+	.banner.home {
+	background: linear-gradient(90deg, rgba(209, 226, 172, 1) 30%, rgba(209, 226, 172, 0) 75%), url("/images/banner-home4.jpg");
+	background-position:right 0px;
+	background-size:100% auto;
+}
+	
+	.banner.servicios {
+	background: linear-gradient(90deg, rgba(209, 226, 172, 1) 30%, rgba(209, 226, 172, 0) 75%), url("/images/banner-servicios2.jpg");
+	background-position:right 0px;
+	background-size:100% auto;
+}
+	
+	.banner-home-logo{
+text-align: left;
+}
+}
+
+@media (min-width: 1200px) {
+	.banner.home {
+		background: linear-gradient(90deg, rgba(209, 226, 172, 1) 55%, rgba(209, 226, 172, 0) 85%), url("/images/banner-home4.jpg");
+ /* background:url("/images/banner-home4.jpg");*/
+	 background-position: right calc(100% + 50px);
+	background-size:auto 100%;
+		background-repeat: no-repeat;
+}
+	
+	.banner.servicios {
+		background: linear-gradient(90deg, rgba(209, 226, 172, 1) 55%, rgba(209, 226, 172, 0) 85%), url("/images/banner-servicios2.jpg");
+ /* background:url("/images/banner-home4.jpg");*/
+	 background-position: right calc(100% + 50px);
+	background-size:auto 100%;
+		background-repeat: no-repeat;
+}
+	
+	  .banner.nosotros {
+  background:linear-gradient(90deg, rgba(209, 226, 172, 1) 55%, rgba(209, 226, 172, 0) 75%), url("/images/banner-nosotros2.jpg");
+ background-position: left, 110% -100px;
+	background-size:100%, auto 120%;
+	background-repeat: no-repeat;
+}
+}
+
+
+@media (min-width: 1320px) {
+	  .banner.nosotros {
+  background:linear-gradient(90deg, rgba(209, 226, 172, 1) 55%, rgba(209, 226, 172, 0) 75%), url("/images/banner-nosotros2.jpg");
+ background-position: left, 110% -100px;
+	background-size:100%, 50% auto;
+	background-repeat: no-repeat;
+}
+}
+/*TERMINA SECTION DENTOL INTRO*/
+/*///////////////////////////////////*/

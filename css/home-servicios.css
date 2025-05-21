@@ -1,0 +1,124 @@
+/*///////////////////////////////////*/
+#home-servicios {
+  background: #FFFFFF;
+  padding-top: 50px;
+}
+#home-servicios .col-md-3 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#home-servicios .item {
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+}
+#home-servicios h3 {
+  padding-bottom: 30px;
+}
+#home-servicios .icon {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+/*///colores alternados//*/
+#home-servicios .row > div:nth-child(odd) .item {
+  background-color: var(--gris);
+}
+#home-servicios .row > div:nth-child(even) .item {
+  background-color: var(--grisazulado);
+}
+#home-servicios .level {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 20px 50px 20px 25px;
+  width: max-content;
+  border-radius: 0 40px 40px 0;
+}
+
+/*///colores de fondo los titulos//*/
+#home-servicios .level1 .level {
+  background: var(--level1)
+}
+/*#home-servicios .level1:hover .level{
+  background: var(--level1hover)
+}*/
+#home-servicios .level2 .level {
+  background: var(--level2)
+}
+#home-servicios .level3 .level {
+  background: var(--level3)
+}
+#home-servicios .level4 .level {
+  background: var(--level4)
+}
+#home-servicios .d-md-block {
+  height: 2px;
+}
+
+/*///colores en hover//*/
+.card1.level1:before {
+  background: var(--level1);
+}
+.card1.level2:before {
+  background: var(--level2);
+}
+.card1.level3:before {
+  background: var(--level3);
+}
+.card1.level4:before {
+  background: var(--level4);
+}
+
+/*///colores de los íconos en hover//*/
+
+#home-servicios .row > div:nth-child(odd) .item:hover svg path{
+  fill: #ffffff;
+}
+
+#home-servicios .card1.level4:hover {
+  color: #ffffff;
+}
+
+
+
+@media (min-width: 768px) {
+  #home-servicios {
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(209, 226, 172, 1) 50%);
+    background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(209, 226, 172, 1) 50%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 50%, rgba(209, 226, 172, 1) 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFFFFF", endColorstr="#D1E2AC", GradientType=0);
+  }
+  #home-servicios .item {
+    border-radius: 25px 50px 50px 0;
+  }
+}
+@media (min-width: 992px) {
+  #home-servicios .item {
+    border-radius: 35px 100px 100px 0;
+  }
+}
+@media (min-width: 1200px) {
+  #home-servicios .item {
+    border-radius: 50px 150px 150px 0;
+  }
+  #home-servicios .col-md-3 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  #home-servicios .icon {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1500px) {
+  #home-servicios .item {
+    border-radius: 50px 150px 150px 0;
+  }
+}
+@media (min-width: 1700px) {
+  #home-servicios {
+    padding-top: 100px;
+  }
+}

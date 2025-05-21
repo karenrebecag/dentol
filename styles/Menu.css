@@ -1,0 +1,248 @@
+/* ========= HEADER FIJO SUPERIOR ========= */
+.header_dentol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px 40px;
+   background: #D1E2AC;
+background: -webkit-linear-gradient(180deg,rgba(209, 226, 172, 1) 50%, rgba(209, 226, 172, 0) 100%);
+background: -moz-linear-gradient(180deg,rgba(209, 226, 172, 1) 50%, rgba(209, 226, 172, 0) 100%);
+background: linear-gradient(180deg,rgba(209, 226, 172, 1) 50%, rgba(209, 226, 172, 0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(
+  startColorstr="#D1E2AC",
+  endColorstr="#D1E2AC",
+  GradientType=0
+);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 120px;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+	
+  }
+  
+  .header_hidden_dentol {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .logo_dentol {
+    height: 80px;
+	  position:absolute;
+	  top:20px;
+	  left:20px;
+  }
+  
+  .menu_top_dentol {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  /* ========= BOTÓN MENÚ ========= */
+
+  .menu_button_dentol {
+    padding: 12px 24px;
+    font-weight: bold;
+    background: #f8fbe9;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #0c1a2c;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .menu_button_dentol:hover {
+    background-color: #e7f1c5;
+  }
+  
+  /* ========= OVERLAY MEGA MENÚ ========= */
+  .menu_overlay_dentol {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e8f6b7;
+    z-index: 10000;
+    padding: 40px 20px;
+    overflow-y: auto;
+  
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu_overlay_dentol.active_dentol {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .menu_overlay_dentol.fadeout_dentol {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* ========= CONTENIDO INTERNO DEL MENÚ ========= */
+  .menu_content_dentol {
+    max-width: 960px;
+	 margin: auto;
+  /*  margin: 60px auto;*/
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+	 
+  }
+  
+  .menu_overlay_dentol.active_dentol .menu_content_dentol {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .menu_overlay_dentol.fadeout_dentol .menu_content_dentol {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  /* ========= BOTÓN DE CIERRE ========= */
+  .close_button_dentol {
+    background: none;
+    font-size: 32px;
+    border: none;
+    align-self: flex-end;
+    cursor: pointer;
+    color: #0c1a2c;
+	    position:absolute;
+	  top:0px;
+		  right:0px;
+  }
+  
+  /* ========= LINKS DEL MENÚ ========= */
+  .nav_links_dentol {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .nav_links_dentol a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--blueMain);
+    text-decoration: none;
+    border-bottom: 1px solid #cddfa295;
+    padding-bottom: 12px;
+    transition: color 0.3s ease-in-out;
+    transform: translateX(0);
+  }
+  
+  .nav_links_dentol a span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav_links_dentol a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+svg.insta, svg.face{
+	height: 25px;
+	width:auto;
+	fill:var(--azulmarino)
+}
+
+svg.insta:hover, svg.face:hover{
+margin-top:-10px;
+}
+
+
+  
+  /* Rotación sólo en WebKit (iPhone/Safari) */
+  @supports (-webkit-appearance: none) and (-webkit-touch-callout: none) {
+    .nav_links_dentol a img,
+    #nextServicio img {
+      transform: rotate(180deg);
+    }
+  }
+  
+  /* Hover sobre link (independiente de @supports) */
+  .nav_links_dentol a:hover {
+    color: #000000;
+  }
+  
+  .nav_links_dentol a:hover span,
+  .nav_links_dentol a:hover img {
+    transform: translateX(10px);
+  }
+  
+  /* ========= PIE DEL MENÚ ========= */
+  .menu_footer_dentol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+    gap: 20px;
+  }
+  
+  .socials_dentol {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .socials_dentol a img {
+    width: 45px;
+    height: 45px;
+    transition: filter 0.3s ease;
+    background-color: var(--blueMain);
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .socials_dentol a:hover img {
+    filter: invert(100%) saturate(100%);
+    background-color: var(--greenmain);
+    border: 1px solid var(--blueMain);
+  }
+  
+  /* ========= RESPONSIVE ========= */
+  @media (max-width: 768px) {
+	  
+    .menu_content_dentol {
+	 margin:auto 0px;
+     /* margin-top: 80px;*/
+      padding-bottom: 0px;
+    }
+  
+    .menu_overlay_dentol {
+      padding: 30px 20px;
+    }
+  
+    .nav_links_dentol a {
+      font-size: 20px;
+    }
+  
+    .WhatsAppButton {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .menu_footer_dentol {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+  }

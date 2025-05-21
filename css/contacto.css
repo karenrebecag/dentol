@@ -1,0 +1,110 @@
+.img-perfil{
+	height: auto;
+	margin:0 auto!important;
+	display:block;
+}
+
+
+.title{
+text-align: center;
+padding:30px 0 30px 0;
+}
+
+.content-text{
+padding:40px 30px;
+}
+
+.logo-links{
+display: inline-flex;
+    flex-direction: column;
+	gap:35px;
+}
+.logo-links a{
+	background: var(--azulmarino);
+    height: 55px;
+    display: inline-block;
+    width: 55px;
+    border-radius: 30px;
+    text-align: center;
+	margin-right:15px;
+}
+
+.logo-links a:hover{
+	margin-top:-10px;
+}
+
+.logo-links svg.insta, .logo-links svg.face{
+transform: translateY(50%);
+	fill:#ffffff;
+}
+
+.logo-links svg.insta:hover, .logo-links svg.face:hover{
+margin-top:0px;
+}
+
+@media (min-width: 768px) {
+.img-perfil{
+max-width: 510px;
+}
+.logo-links{
+display: inline-flex;
+flex-direction: row;
+align-items: center;
+}
+}
+
+
+@media (min-width: 991px) {
+.img-perfil{
+position: absolute;	
+	z-index: 999;
+max-width: 100%;
+
+}
+	
+.title, .content-text{
+padding:30px 0% 30px 0%;
+	text-align: left;	
+}
+    
+    .col-img{
+position: absolute;
+ margin:20px 50%;       
+}
+	
+
+}
+
+
+@media (min-width: 1200px) {
+  .title, .content-text{
+padding:30px 0% 30px 0%;
+	text-align: left;	
+}  
+}
+
+/*///////////////////////*/
+
+#datos-contacto h6{
+margin-bottom:0px;
+}
+
+#datos-contacto .col-12{
+  margin-bottom:10px;
+}
+
+
+
+#datos-contacto .item{
+    border-radius: 20px;
+    padding:25px 10px 15px 10px;
+    margin-bottom:10px;
+      display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+}
+
+.d-lg-block{
+height:2px;
+}

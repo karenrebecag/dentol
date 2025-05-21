@@ -1,0 +1,202 @@
+/*///////////////////////////////////*/
+/**/
+.home-pacientes {
+  text-align: center;
+  margin-bottom: 25rem;
+}
+.home-pacientes .container {
+  min-width: calc(100% - 10%);
+}
+.home-pacientes h2 {
+  font-size: 64px;
+  font-weight: 800;
+  text-transform: none;
+}
+.home-pacientes .item {
+  background-size: cover, 100% auto;
+  background-position: center 0px;
+  display: flex;
+  flex-direction: column; /* dirección vertical */
+  justify-content: flex-end; /* alinea los hijos al fondo del contenedor */
+  color: #ffffff;
+  /* aspect-ratio: 1 / 1;*/
+  width: 100%; /* O cualquier valor fijo o relativo */
+  padding: 0px 30% 0.6rem;
+  align-items: center;
+}
+.home-pacientes .title {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center !important;
+  background: none;
+  padding: 0px;
+  line-height: 1.2rem;
+}
+.home-pacientes .card1:hover:before {
+  transform: scale(7);
+  transform: translateX(-60px) translateY(60px);
+}
+/*///colores en hover//*/
+.home-pacientes .card1:before {
+  background: rgba(19, 32, 53, 1);
+}
+.home-pacientes .arrow {
+  width: 0.00rem;
+  height: 0.125rem;
+  background: #ffffff;
+  position: absolute;
+  display: block;
+  top: 10%;
+  right: 10%;
+}
+.home-pacientes .arrow::before {
+  position: absolute;
+  content: '';
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid rgba(255, 255, 255, 0);
+  border-right: 0.125rem solid rgba(255, 255, 255, 0);
+  transform: rotate(45deg);
+}
+.home-pacientes .card1:hover .arrow {
+  width: 1.125rem;
+}
+.home-pacientes .card1:hover .arrow::before {
+  border-top: 0.125rem solid rgba(255, 255, 255, 1);
+  border-right: 0.125rem solid rgba(255, 255, 255, 1);
+}
+.home-pacientes .item:hover {
+  background-size: cover, 150%;
+  background-position: center center, calc(100%) -10px;
+  background-repeat: repeat, no-repeat;
+}
+/*posición para móviles*/
+.cont > div:first-of-type {
+  margin-top: 0px;
+  /*background: green;*/
+}
+.cont > *:nth-child(even) {
+  transform: translateY(50%);
+  padding-left: 7px;
+  /*background: red;*/
+}
+.home-pacientes .row > div:nth-child(even) .item:hover::before {
+  transform: scale(1.1) translateX(-60px) translateY(60px);
+}
+.cont > *:nth-child(even) .arrow {
+  top: 13% !important;
+  right: 14% !important;
+}
+.cont > *:nth-child(odd) {
+  padding-right: 7px;
+  margin-top: 14px;
+  /*background: red;*/
+}
+/*mascara para móviles*/
+.home-pacientes .item {
+  aspect-ratio: 1 / 1.273;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+.home-pacientes .row > div:nth-child(odd) .item {
+  /*translate:trnasformY(-50%);*/
+  mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNTA2Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTM5NS40LDgyYzAtNDUuMy0zNi43LTgyLTgyLTgySDE0Ny42QzY4LjMsMCw0LDU0LjMsNCwxNDMuNlYzNTRjMCw3OS4zLDY0LjMsMTQzLjYsMTQzLjYsMTQzLjZoMjQ3LjhWODJ6Ii8+PC9zdmc+");
+  -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNTA2Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTM5NS40LDgyYzAtNDUuMy0zNi43LTgyLTgyLTgySDE0Ny42QzY4LjMsMCw0LDU0LjMsNCwxNDMuNlYzNTRjMCw3OS4zLDY0LjMsMTQzLjYsMTQzLjYsMTQzLjZoMjQ3LjhWODJ6Ii8+PC9zdmc+");
+}
+.home-pacientes .row > div:nth-child(even) .item {
+  /*margin-top:50%;*/
+  translaye: transformY(-50px);
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 506"><path fill="white" d="M4,497.6h247.8c79.3,0,143.6-64.3,143.6-143.6V143.6C395.4,64.3,331.1,0,251.8,0L86,0C40.7,0,4,36.7,4,82V497.6z"/></svg>') no-repeat center;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 506"><path fill="white" d="M4,497.6h247.8c79.3,0,143.6-64.3,143.6-143.6V143.6C395.4,64.3,331.1,0,251.8,0L86,0C40.7,0,4,36.7,4,82V497.6z"/></svg>') no-repeat center;
+  color: var(--azulmarino);
+}
+.home-pacientes .item.adolescentes {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 50%, rgba(19, 32, 53, 1) 100%), url("../images/dentol-adolescente.jpg");
+}
+.home-pacientes .item.adultos {
+  background-image: linear-gradient(180deg, rgba(209, 226, 172, 0.03) 50%, rgba(209, 226, 172, 1) 100%), url("../images/dentol-adulto.jpg");
+}
+.home-pacientes .item.adulto-mayor {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 73%, rgba(19, 32, 53, 1) 99%, rgba(255, 255, 255, 1) 100%), url("../images/dentol-adulto-mayor-home.jpg");
+}
+.home-pacientes .item.embarazadas {
+  background-image: linear-gradient(180deg, rgba(209, 226, 172, 0.03) 50%, rgba(209, 226, 172, 1) 100%), url("../images/dentol-embarazadas-home.jpg");
+}
+.home-pacientes .item.ansiedad {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 73%, rgba(19, 32, 53, 1) 99%, rgba(255, 255, 255, 1) 100%), url("../images/dentol-ansiedad-home.jpg");
+}
+.home-pacientes .item.cronicas {
+  background-image: linear-gradient(180deg, rgba(209, 226, 172, 0.03) 50%, rgba(209, 226, 172, 1) 100%), url("../images/dentol-cronicas-home.jpg");
+}
+.home-pacientes .item.deportistas {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 73%, rgba(19, 32, 53, 1) 99%, rgba(255, 255, 255, 1) 100%), url("../images/dentol-deportistas-home.jpg");
+}
+.home-pacientes .item.alergias {
+  background-image: linear-gradient(180deg, rgba(209, 226, 172, 0.03) 50%, rgba(209, 226, 172, 1) 100%), url("../images/dentol-alergias-home.jpg");
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /*posición para móviles*/
+  .home-pacientes {
+    margin-bottom: 0;
+  }
+  .cont > *:nth-child(even) {
+    transform: translateY(0%);
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 0px;
+    /*background: red;*/
+  }
+  .cont > *:nth-child(odd) {
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-top: 0px;
+    /*background: red;*/
+  }
+  .home-pacientes .row > div:nth-child(odd) .item {
+    mask: none;
+    border-radius: 50px;
+    margin-bottom: 14px;
+  }
+  .home-pacientes .row > div:nth-child(even) .item {
+    mask: none;
+    border-radius: 50px;
+  }
+  .home-pacientes .row > div:nth-child(even) .item:hover::before {
+    transform: scale(1) translateX(-60px) translateY(60px);
+  }
+  .cont > *:nth-child(even) .arrow {
+    top: 10% !important;
+    right: 10% !important;
+  }
+}
+@media (min-width: 768px) {
+  .home-pacientes .title {
+    font-size: 18px;
+    line-height: 1.4rem;
+  }
+}
+@media (min-width: 1300px) {
+  .home-pacientes .item.adolescentes {
+    /*height:391px;*/
+    mask-size: 100% 100%; /* Ajusta la máscara al tamaño del div */
+    mask-repeat: no-repeat;
+    mask-position: center;
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNTA2Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTM5NS40LDgyYzAtNDUuMy0zNi43LTgyLTgyLTgySDE0Ny42QzY4LjMsMCw0LDU0LjMsNCwxNDMuNlYzNTRjMCw3OS4zLDY0LjMsMTQzLjYsMTQzLjYsMTQzLjZoMjQ3LjhWODJ6Ii8+PC9zdmc+");
+    -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgNTA2Ij48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTM5NS40LDgyYzAtNDUuMy0zNi43LTgyLTgyLTgySDE0Ny42QzY4LjMsMCw0LDU0LjMsNCwxNDMuNlYzNTRjMCw3OS4zLDY0LjMsMTQzLjYsMTQzLjYsMTQzLjZoMjQ3LjhWODJ6Ii8+PC9zdmc+");
+    /*background-size:120% auto;*/
+  }
+  .home-pacientes .item.adultos {
+    /*height:288px;*/
+  }
+}
+/*///////////////////////////////////*/

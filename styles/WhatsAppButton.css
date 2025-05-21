@@ -1,0 +1,60 @@
+.whatsapp_floating_dentol {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: block; 
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  cursor: pointer;
+}
+
+.whatsapp_floating_dentol .Frame15 {
+  background: linear-gradient(0deg, #20B038 0%, #60D66A 100%);
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px;
+}
+
+.whatsapp_floating_dentol .Vector {
+  width: 62px;
+  height: 62px;
+  filter: invert(100%) brightness(100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tooltip_whatsapp {
+  position: absolute;
+  right: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: #20B038;
+  font-weight: var(--bold);
+  font-size: var(--body-small);
+  font-family: var(--mainFont);
+  padding: 8px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.Frame15:hover .tooltip_whatsapp {
+  opacity: 1;
+  transform: translateY(-50%) translateX(-10px);
+}
+
+.whatsapp_floating_dentol.hide_dentol {
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+

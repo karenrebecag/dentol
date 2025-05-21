@@ -1,0 +1,44 @@
+.disenosonrisa .imagesrow {
+  padding: 0 0 0 0px;
+  margin-bottom: 35px;
+}
+.banner-disenosonrisa {
+  padding: 20px;
+  background: var(--verdedentol);
+}
+@media (min-width: 992px) {
+  .imagesrow > div:first-of-type {
+    min-width: 28%;
+    max-width: 28%;
+  }
+  .imagesrow > div:nth-of-type(2) {
+    min-width: 22%;
+    max-width: 22%;
+  }
+  .imagesrow > div:nth-of-type(3) {
+    min-width: 20%;
+    max-width: 20%;
+  }
+  .imagesrow > div:nth-of-type(4) {
+    min-width: 27%;
+    max-width: 27%;
+  }
+}
+@media (min-width: 1200px) {
+  .imagesrow > div:first-of-type {
+    min-width: 26%;
+    max-width: 26%;
+  }
+  .imagesrow > div:nth-of-type(2) {
+    min-width: 24%;
+    max-width: 24%;
+  }
+  .imagesrow > div:nth-of-type(3) {
+    min-width: 20%;
+    max-width: 20%;
+  }
+  .imagesrow > div:nth-of-type(4) {
+    min-width: 27%;
+    max-width: 27%;
+  }
+}
