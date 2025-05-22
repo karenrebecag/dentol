@@ -42,13 +42,13 @@ function createServiciosComponent() {
         </div>
 
         <div class="ServiciosNavDots">
-          <button id="prevServicio" class="NavArrow disabled" type="button" aria-label="Servicio anterior">
+          <button id="prevServicio" class="NavArrow disabled" type="button" aria-label="Servicio anterior" disabled="">
             <img src="/assets/Icons/General/ArrowLeft.svg" alt="">
           </button>
-          <span class="dot dot-active" data-slide="0" role="tab" aria-selected="true"></span>
-          <span class="dot dot-inactive" data-slide="1" role="tab" aria-selected="false"></span>
-          <span class="dot dot-inactive" data-slide="2" role="tab" aria-selected="false"></span>
-          <span class="dot dot-inactive" data-slide="3" role="tab" aria-selected="false"></span>
+          <span class="button-slide slide-active" data-slide="0" role="tab" aria-selected="true"></span>
+          <span class="button-slide slide-inactive" data-slide="1" role="tab" aria-selected="false"></span>
+          <span class="button-slide slide-inactive" data-slide="2" role="tab" aria-selected="false"></span>
+          <span class="button-slide slide-inactive" data-slide="3" role="tab" aria-selected="false"></span>
           <button id="nextServicio" class="NavArrow" type="button" aria-label="Siguiente servicio">
             <img src="/assets/Icons/General/ArrowRight.svg" alt="">
           </button>
@@ -124,7 +124,7 @@ function createServiciosComponent() {
                 <h3 class="HeadingSmall">Técnica de cepillado y uso de hilo dental</h3>
                 <h4 class="SubHeadingVerde">Recomendado cada 6 meses</h4>
                 <p class="Paragraph">
-                  Nuestros especialistas te enseñan y refuerzan la técnica adecuada de cepillado y uso de hilo dental para asegurar una higiene bucal efectiva. Durante tu consulta, recibirás una demostración personalizada sobre cómo cepillar tus dientes correctamente, utilizando el movimiento suave y circular para evitar dañar el esmalte o las encías. Además, te explicarán cómo llegar a todas las áreas de tu boca, incluyendo las superficies posteriores y los molares. <br> <br>
+                  Nuestros especialistas te enseñan y refuerzan la técnica adecuada de cepillado y uso de hilo dental para asegurar una higiene bucal efectiva. Durante tu consulta, recibirás una demostración personalizada sobre cómo cepillar tus dientes correctamente, utilizando el movimiento suave y circular para evitar dañar el esmalte o las encías. Además, te explicarán cómo llegar a todas las áreas de tu boca, incluyendo las superficies posteriores y los molares. <br><br>
                   El uso de hilo dental también se enseña para que puedas eliminar la placa entre los dientes, donde el cepillo no alcanza. Nuestros profesionales te guiarán en la forma correcta de usarlo, asegurándose de que no dañes las encías al pasarlo entre los dientes.
                 </p>
                 <p class="ParagraphBold">
@@ -473,7 +473,7 @@ function initServiciosComponent(targetId) {
 
     const servicioButtons = document.querySelectorAll('.ServicioButton');
     const allButtons = document.querySelectorAll('.ServiciosSelector button');
-    const dots = document.querySelectorAll('.dot');
+    const slideButtons = document.querySelectorAll('.ServiciosNavDots .button-slide');
     const prevBtn = document.getElementById('prevServicio');
     const nextBtn = document.getElementById('nextServicio');
     const selector = document.querySelector('.ServiciosSelector');
@@ -490,6 +490,38 @@ function initServiciosComponent(targetId) {
     let scrollTimeout = null;
     let isInitialLoad = true;
 
+    // Centrar puntitos horizontalmente
+    function centerDots() {
+        const containerDots = document.querySelectorAll('.SubContainerServices .dot');
+        // Ajustes finos en píxeles
+        const leftDotFineOffset = -5; // Mover 3px a la derecha para Col50Left (negativo porque right disminuye)
+        const rightDotFineOffset = -5; // Mover 3px a la izquierda para Col50Right (negativo porque left disminuye)
+    
+        containerDots.forEach(dot => {
+            const parent = dot.closest('.SubContainerServices');
+            if (!parent) return;
+    
+            const parentRect = parent.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const parentLeft = parentRect.left;
+    
+            // Calcular la posición para centrar en el 50% del viewport
+            const viewportCenter = viewportWidth / 2;
+    
+            if (dot.closest('.Col50Left')) {
+                // Para Col50Left, right: 0 es el punto de referencia
+                // Ajustar right para centrar con ajuste fino
+                const rightOffset = parentRect.right - viewportCenter + leftDotFineOffset;
+                dot.style.right = `${rightOffset}px`;
+            } else {
+                // Para Col50Right, left: 0 es el punto de referencia
+                // Ajustar left para centrar con ajuste fino
+                const leftOffset = viewportCenter - parentLeft + rightDotFineOffset;
+                dot.style.left = `${leftOffset}px`;
+            }
+        });
+    }
+
     // Retrasar la activación del auto-scroll para evitar interferencias con ScrollTrigger
     setTimeout(() => {
         isInitialLoad = false;
@@ -501,8 +533,11 @@ function initServiciosComponent(targetId) {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
             isUserScrolling = false;
-        }, 500);
+        }, 150);
+        centerDots(); // Actualizar posiciones de puntitos
     });
+
+    window.addEventListener('resize', centerDots); // Actualizar al redimensionar
 
     function updateSelectorState(source = 'unknown') {
         // Actualizar clases de botones
@@ -512,10 +547,10 @@ function initServiciosComponent(targetId) {
         });
 
         // Actualizar clases y ARIA de puntos
-        dots.forEach((dot, index) => {
-            dot.classList.remove('dot-active', 'dot-inactive');
-            dot.classList.add(index === currentIndex ? 'dot-active' : 'dot-inactive');
-            dot.setAttribute('aria-selected', index === currentIndex ? 'true' : 'false');
+        slideButtons.forEach((btn, index) => {
+            btn.classList.remove('slide-active', 'slide-inactive');
+            btn.classList.add(index === currentIndex ? 'slide-active' : 'slide-inactive');
+            btn.setAttribute('aria-selected', index === currentIndex ? 'true' : 'false');
         });
 
         // Controlar visibilidad de tres botones
@@ -556,7 +591,7 @@ function initServiciosComponent(targetId) {
         }
 
         // Desplazamiento automático al anclaje del botón activo
-        if (!isInitialLoad) {
+        if (!isInitialLoad && source !== 'scrollTriggerEnter' && source !== 'scrollTriggerEnterBack') {
             const targetId = servicioButtons[currentIndex].dataset.target;
             const targetElement = document.querySelector(`#${targetId}`);
             if (targetElement && targetElement !== lastScrollTarget && !isUserScrolling) {
@@ -582,7 +617,7 @@ function initServiciosComponent(targetId) {
         nextBtn.classList.toggle('disabled', nextBtn.disabled);
     }
 
-    // Lógica para las barras de progreso y puntitos en todos los niveles
+    // Lógica para las barras de progreso y estado de puntitos
     function handleNivelScroll() {
         const niveles = [
             { id: 'Nivel1Content', barId: 'myBar1' },
@@ -613,13 +648,14 @@ function initServiciosComponent(targetId) {
         });
 
         // Actualizar estado de los puntitos
-        const dots = document.querySelectorAll('.dot');
-        dots.forEach(dot => {
-            const rect = dot.getBoundingClientRect();
-            const viewportCenter = window.innerHeight / 2;
-            const isCentered = rect.top <= viewportCenter && rect.bottom >= viewportCenter;
+        const containerDots = document.querySelectorAll('.SubContainerServices .dot');
+        containerDots.forEach(dot => {
+            const parent = dot.closest('.SubContainerServices');
+            if (!parent) return;
 
-            if (isCentered) {
+            const rect = parent.getBoundingClientRect();
+            const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+            if (isInViewport) {
                 dot.classList.remove('inactive');
                 dot.classList.add('active');
             } else {
@@ -627,6 +663,8 @@ function initServiciosComponent(targetId) {
                 dot.classList.add('inactive');
             }
         });
+
+        centerDots(); // Centrar puntitos en cada scroll
     }
 
     function initGSAPAnimations() {
@@ -676,13 +714,19 @@ function initServiciosComponent(targetId) {
             });
         });
 
-        // Detectar niveles al desplazarse
-        const niveles = ['#nivel1', '#nivel2', '#nivel3', '#nivel4'];
-        niveles.forEach((nivel, index) => {
+        // Detectar niveles al desplazarse con triggers específicos
+        const nivelTriggers = [
+            { trigger: '#SubContainerServices0', index: 0 }, // Nivel 1: Consulta y diagnóstico
+            { trigger: '#SubContainerServices5', index: 1 }, // Nivel 2: Resinas
+            { trigger: '#SubContainerServices10', index: 2 }, // Nivel 3: Coronas
+            { trigger: '#SubContainerServices21', index: 3 } // Nivel 4: Extracciones
+        ];
+
+        nivelTriggers.forEach(({ trigger, index }) => {
             ScrollTrigger.create({
-                trigger: nivel,
-                start: 'top 50%',
-                end: 'bottom 50%',
+                trigger: trigger,
+                start: 'top 20%',
+                end: 'bottom 20%',
                 onEnter: () => {
                     if (!isAnimating && currentIndex !== index) {
                         currentIndex = index;
@@ -719,8 +763,8 @@ function initServiciosComponent(targetId) {
         });
     });
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', (e) => {
+    slideButtons.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
             e.preventDefault();
             if (!isAnimating) {
                 currentIndex = index;
@@ -745,8 +789,9 @@ function initServiciosComponent(targetId) {
         }
     });
 
-    // Añadir el evento de scroll para las barras y puntitos
+    // Añadir el evento de scroll para barras y puntitos
     window.addEventListener('scroll', handleNivelScroll);
+    window.addEventListener('resize', handleNivelScroll);
     handleNivelScroll();
 
     initGSAPAnimations();

@@ -1,8 +1,8 @@
 /* Variables CSS */
 :root {
-  --nivel1-color: #d4e1b1;
-  --nivel2-color: #7F9B44;
-  --nivel3-color: #E2DAAC;
+  --nivel1-color: #D1E2AC;
+  --nivel2-color: #E2DAAC;
+  --nivel3-color: #B77A39;
   --nivel4-color: #732525;
   --pill1-border: #859a50;
   --pill2-border: #979068;
@@ -26,7 +26,7 @@
   --border-radius-nav-arrow: 50%;
   --border-radius-image-right: 50px 0 190px 50px;
   --border-radius-image-left: 50px 0 50px 190px;
-  --border-radius-image-mobile: 20px;
+  --border-radius-image-mobile: 35px;
 }
 
 /* Animaciones */
@@ -114,8 +114,8 @@ body {
   padding: 20px 0;
 }
 
-.dot,
-.dot-inactive {
+.button-slide,
+.slide-inactive {
   width: 43px;
   height: 5px;
   background: var(--dot-inactive);
@@ -124,19 +124,19 @@ body {
   transition: background var(--transition-ease);
 }
 
-.dot[data-slide="0"].dot-active {
+.button-slide[data-slide="0"].slide-active {
   background: var(--nivel1-color);
 }
 
-.dot[data-slide="1"].dot-active {
+.button-slide[data-slide="1"].slide-active {
   background: var(--nivel2-color);
 }
 
-.dot[data-slide="2"].dot-active {
+.button-slide[data-slide="2"].slide-active {
   background: var(--nivel3-color);
 }
 
-.dot[data-slide="3"].dot-active {
+.button-slide[data-slide="3"].slide-active {
   background: var(--nivel4-color);
 }
 
@@ -326,7 +326,7 @@ body {
 .SubContainerServices {
   max-width: 712px;
   margin-bottom: 60px;
-  position: relative;
+  position: relative; /* Contenedor de referencia para .dot */
 }
 
 .imgServices {
@@ -362,17 +362,43 @@ body {
   scroll-margin-top: 40px;
 }
 
-/* Estilos para el indicador de scroll en Nivel 1 */
+/* Estilos para los puntitos */
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 12; /* Mayor que progress-container (10), menor que StickyBar (1000) */
+  top: 0; /* Alineado con la parte superior del SubContainerServices */
+}
+
+.Col50Left .dot {
+  right: 0; /* Esquina superior derecha para Col50Left */
+}
+
+.Col50Right .dot {
+  left: 0; /* Esquina superior izquierda para Col50Right */
+}
+
+.dot.inactive {
+  background: #ccc;
+  opacity: 0.5;
+}
+
+.dot.active {
+  background: #132035;
+  opacity: 1;
+  transform: scale(1.5);
+  transition: background 0.3s ease 0.2s, opacity 0.3s ease, transform 0.3s ease; /* Delay en background */
+}
+
+/* Estilos para el indicador de scroll en todos los niveles */
 .progress-container {
   position: sticky;
-  top: 0%;
-  width: 10px!;
+  top: 0;
+  width: 6px;
   height: 100vh;
   background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   z-index: 10;
   margin: 0 20px;
 }
@@ -385,10 +411,31 @@ body {
   transition: height 0.3s ease;
 }
 
-#myBar {
+#myBar1 {
   background: var(--nivel1-color);
-  height: 0; 
-  top: 0; 
+  height: 0;
+  top: 0;
+  z-index: 11;
+}
+
+#myBar2 {
+  background: var(--nivel2-color);
+  height: 0;
+  top: 0;
+  z-index: 11;
+}
+
+#myBar3 {
+  background: var(--nivel3-color);
+  height: 0;
+  top: 0;
+  z-index: 11;
+}
+
+#myBar4 {
+  background: var(--nivel4-color);
+  height: 0;
+  top: 0;
   z-index: 11;
 }
 
@@ -398,38 +445,6 @@ body {
   top: 0;
   z-index: 10;
   background: none;
-}
-
-.indicator {
-  position: relative;
-  font-family: 'Fira-Code', monospace;
-  font-size: 16px;
-  color: #c0c8d4d6;
-  padding: 5px 10px;
-  background-color: transparent;
-  transition: all 0.4s ease;
-  text-align: center;
-  margin: 0;
-}
-
-.indicator.scrolled {
-  font-size: 18px;
-  color: var(--nivel1-color);
-  font-weight: var(--bold-font-weight);
-}
-
-.indicator.one {
-  top: 0;
-}
-
-.indicator.two {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.indicator.three {
-  top: 100%;
-  transform: translateY(-100%);
 }
 
 /* Responsive: up to 1199px */
@@ -452,6 +467,12 @@ body {
   }
   .progress-container {
     display: none;
+  }
+  .dot {
+    display: none; /* Desaparecen junto con la barra de scroll */
+  }
+  .MainBannerServices {
+    display: none; /* Ocultar header en móviles */
   }
 }
 
